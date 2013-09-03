@@ -86,6 +86,14 @@ Set to `true` or a port number to inject a live reload script tag into your page
 
 *This does not perform live reloading. It is intended to be used in tandem with grunt-contrib-watch or another task that will trigger a live reload server upon files changing.*
 
+#### open
+Type: `Boolean` or `String`
+Default: `false`
+
+Open the served page in the browser.
+
+You can also set a custom URL.
+
 #### middleware
 Type: `Function`  
 Default:
@@ -267,4 +275,4 @@ grunt.registerTask('jasmine-server', 'start web server for jasmine tests in brow
 
 Task submitted by ["Cowboy" Ben Alman](http://benalman.com)
 
-*This file was generated on Mon Sep 02 2013 20:34:53.*
+*This file was generated on Tue Sep 03 2013 05:56:44.*
