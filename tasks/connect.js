@@ -97,6 +97,10 @@ module.exports = function(grunt) {
       server = http.createServer(app);
     }
 
+    if (options.updateServer) {
+      options.updateServer(server);
+    }
+
     server
       .listen(options.port, options.hostname)
       .on('listening', function() {
@@ -118,10 +122,6 @@ module.exports = function(grunt) {
           grunt.fatal(err);
         }
       });
-
-    if (options.updateServer) {
-      options.updateServer(server);
-    }
 
     // So many people expect this task to keep alive that I'm adding an option
     // for it. Running the task explicitly as grunt:keepalive will override any
