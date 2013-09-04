@@ -119,6 +119,10 @@ module.exports = function(grunt) {
         }
       });
 
+    if (options.updateServer) {
+      options.updateServer(server);
+    }
+
     // So many people expect this task to keep alive that I'm adding an option
     // for it. Running the task explicitly as grunt:keepalive will override any
     // value stored in the config. Have fun, people.
